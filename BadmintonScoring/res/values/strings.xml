@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Badminton Scoring</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="newGameButtonStr">New Game</string>
+    <string name="selectGameTypeStr">New Game Type</string>
+    <string name="hintTeam1Pl1Str">Enter Team 1 Player 1 Name</string>
+    <string name="hintTeam1Pl2Str">Enter Team 1 Player 2 Name</string>
+    <string name="hintTeam2Pl1Str">Enter Team 2 Player 1 Name</string>
+    <string name="hintTeam2Pl2Str">Enter Team 2 Player 2 Name</string>
+    <string name="hintPlayer1Str">Enter Player 1 Name</string>
+    <string name="hintPlayer2Str">Enter Player 2 Name</string>
+    <string name="chkSingleGameStr">Single game without sets</string>
+    <string name="gameTypeSingleStr">Singles</string>
+    <string name="gameTypeDoublesStr">Doubles</string>
+    <string name="startGameBtnStr">Start Game</string>
+    <string name="point">Point!</string>
+
+</resources>

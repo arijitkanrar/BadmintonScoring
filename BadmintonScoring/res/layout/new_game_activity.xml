@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtSelectNewGameType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selectGameTypeStr" />
+
+            <RadioGroup
+                android:id="@+id/radGrpGameType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radSingles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/gameTypeSingleStr" />
+
+                <RadioButton
+                    android:id="@+id/radDoubles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gameTypeDoublesStr" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/chkNoSets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chkSingleGameStr" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/txtPlayer1Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hintPlayer1Str"
+            android:inputType="textPersonName" >
+
+            <requestFocus android:layout_width="wrap_content" />
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtPlayer2Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hintPlayer2Str"
+            android:inputType="textPersonName"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/txtT2Player1Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hintPlayer2Str"
+            android:inputType="textPersonName"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/txtT2Player2Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hintTeam2Pl2Str"
+            android:inputType="textPersonName"
+            android:visibility="gone" />
+        
+        <Button android:id="@+id/btnStartGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/startGameBtnStr"
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>
