@@ -27,24 +27,24 @@ public final class R {
     public static final class id {
         public static final int action_settings=0x7f080015;
         public static final int btnStartGame=0x7f080014;
-        public static final int btnT1Points=0x7f080005;
+        public static final int btnT1Point=0x7f080005;
+        public static final int btnT2Point=0x7f080006;
         public static final int chkNoSets=0x7f08000f;
         public static final int newGameButton=0x7f080000;
         public static final int radDoubles=0x7f08000e;
         public static final int radGrpGameType=0x7f08000c;
         public static final int radSingles=0x7f08000d;
-        public static final int t2Points=0x7f08000a;
         public static final int txtPlayer1Name=0x7f080010;
         public static final int txtPlayer2Name=0x7f080011;
         public static final int txtSelectNewGameType=0x7f08000b;
         public static final int txtT1LCPName=0x7f080007;
-        public static final int txtT1RCPName=0x7f080006;
+        public static final int txtT1RCPName=0x7f080009;
         public static final int txtT1TeamName=0x7f080001;
         public static final int txtT1TeamScore=0x7f080002;
-        public static final int txtT2LCPName=0x7f080008;
+        public static final int txtT2LCPName=0x7f08000a;
         public static final int txtT2Player1Name=0x7f080012;
         public static final int txtT2Player2Name=0x7f080013;
-        public static final int txtT2RCPName=0x7f080009;
+        public static final int txtT2RCPName=0x7f080008;
         public static final int txtT2TeamName=0x7f080003;
         public static final int txtT2TeamScore=0x7f080004;
     }
@@ -69,9 +69,10 @@ public final class R {
         public static final int hintTeam2Pl1Str=0x7f050007;
         public static final int hintTeam2Pl2Str=0x7f050008;
         public static final int newGameButtonStr=0x7f050003;
-        public static final int point=0x7f05000f;
         public static final int selectGameTypeStr=0x7f050004;
         public static final int startGameBtnStr=0x7f05000e;
+        public static final int t1Point=0x7f05000f;
+        public static final int t2Point=0x7f050010;
     }
     public static final class style {
         /** 

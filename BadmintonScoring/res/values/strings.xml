@@ -16,6 +16,7 @@
     <string name="gameTypeSingleStr">Singles</string>
     <string name="gameTypeDoublesStr">Doubles</string>
     <string name="startGameBtnStr">Start Game</string>
-    <string name="point">Point!</string>
+    <string name="t1Point">Team 1 Point!</string>
+    <string name="t2Point">Team 2 Point!</string>
 
 </resources>

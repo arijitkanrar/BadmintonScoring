@@ -90,12 +90,29 @@
             android:layout_weight="3"
             android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/btnT1Points"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/point" />
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/btnT1Point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/t1Point" />
+
+                <Button
+                    android:id="@+id/btnT2Point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/t2Point" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -124,32 +141,33 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|center_horizontal"
                         android:layout_weight="1"
                         android:background="@drawable/court_border"
-                        android:orientation="vertical" >
-
-                        <TextView
-                            android:id="@+id/txtT1RCPName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Team1 Right Court Player" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/court_border"
-                        android:layout_gravity="center"
                         android:orientation="vertical" >
 
                         <TextView
                             android:id="@+id/txtT1LCPName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal"
                             android:text="Team1 Left Court Player" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/court_border"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/txtT2RCPName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Team2 Right Court Player" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -157,6 +175,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:orientation="horizontal" >
 
                     <LinearLayout
@@ -167,43 +186,30 @@
                         android:orientation="vertical" >
 
                         <TextView
-                            android:id="@+id/txtT2LCPName"
+                            android:id="@+id/txtT1RCPName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Team2 Left Court Player" />
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Team1 Right Court Player" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
                         android:background="@drawable/court_border"
                         android:orientation="vertical" >
 
                         <TextView
-                            android:id="@+id/txtT2RCPName"
+                            android:id="@+id/txtT2LCPName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Team2 Right Court Player" />
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Team2 Left Court Player" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/t2Points"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/point" />
         </LinearLayout>
     </LinearLayout>
 
