@@ -196,6 +196,29 @@ public class CGame implements Parcelable {
 		serverTeam = 2;
 	}
 
+	public int checkWinner() {
+		if (t1Score >= 21 || t2Score >= 21) {
+			if ((t1Score - t2Score) >= 2) {
+				return 1;
+			} else if ((t2Score - t1Score) >= 2) {
+				return 2;
+			} else {
+				if (t1Score == 30 && t2Score == 29) {
+					return 1;
+				} else if (t2Score == 30 && t1Score == 29) {
+					return 2;
+				} else {
+					return 0;
+				}
+			}
+		} else if (t1Score == 0 && t2Score == 7) {
+			return 2;
+		} else if (t1Score == 7 && t2Score == 0) {
+			return 1;
+		}
+		return 0;
+	}
+
 	private void adjustCourtPosition(int team) {
 		if (serverTeam == team) {
 			if (gameType == EGameType.DOUBLES) {
@@ -236,6 +259,40 @@ public class CGame implements Parcelable {
 				} else {
 					t2RCPlayer = 3;
 					t2LCPlayer = 0;
+				}
+			}
+		} else {
+			// the non-serving team scored
+			// they will have to adjust their court position based on the
+			// score only if its a singles game
+			if (gameType == EGameType.SINGLES) {
+				// if the score is even then the player will move to the right
+				if (team == 1) {
+					if (t1Score % 2 == 0) {
+						// player should be on right court
+						t1RCPlayer = 1;
+						t1LCPlayer = 0;
+						// opposite team player should also change
+						t2RCPlayer = 3;
+						t2LCPlayer = 0;
+					} else {
+						t1RCPlayer = 0;
+						t1LCPlayer = 1;
+						t2RCPlayer = 0;
+						t2LCPlayer = 3;
+					}
+				} else {
+					if (t2Score % 2 == 0) {
+						t2RCPlayer = 3;
+						t2LCPlayer = 0;
+						t1RCPlayer = 1;
+						t1LCPlayer = 0;
+					} else {
+						t2RCPlayer = 0;
+						t2LCPlayer = 3;
+						t1RCPlayer = 0;
+						t1LCPlayer = 1;
+					}
 				}
 			}
 		}
@@ -362,6 +419,26 @@ public class CGame implements Parcelable {
 		}
 
 		return retName;
+	}
+
+	public void resetGame() {
+		// reset the scores to 0
+		t1Score = 0;
+		t2Score = 0;
+		
+		//reset the serving team
+		serverTeam = 1;
+		
+		//reset the player positions
+		t1LCPlayer = 1;
+		t2LCPlayer = 3;
+		if (gameType == EGameType.DOUBLES) {
+			t1LCPlayer = 2;
+			t2LCPlayer = 4;
+		} else {
+			t1LCPlayer = 0;
+			t2LCPlayer = 0;
+		}
 	}
 
 	@Override

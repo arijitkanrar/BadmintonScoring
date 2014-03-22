@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,7 +21,6 @@ public class NewGameSettings extends Activity {
 	private EditText txtT2P1Name;
 	private EditText txtT2P2Name;
 	private Button btnStartGame;
-	private CheckBox chkNoSets;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +36,6 @@ public class NewGameSettings extends Activity {
 		txtT2P1Name = (EditText) findViewById(R.id.txtT2Player1Name);
 		txtT2P2Name = (EditText) findViewById(R.id.txtT2Player2Name);
 		btnStartGame = (Button) findViewById(R.id.btnStartGame);
-		chkNoSets = (CheckBox) findViewById(R.id.chkNoSets);
 
 		newGameType.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -65,7 +62,7 @@ public class NewGameSettings extends Activity {
 						gameTypeSingles.isChecked() ? EGameType.SINGLES
 								: EGameType.DOUBLES, txtT1P1Name.getText().toString(),
 						txtT1P2Name.getText().toString(), txtT2P1Name.getText().toString(),
-						txtT2P2Name.getText().toString(), 0, 0, chkNoSets.isChecked());
+						txtT2P2Name.getText().toString(), 0, 0, true);
 				
 				Intent resultIntent = new Intent();
 				resultIntent.putExtra("NEW_GAME_DETAILS", newGame);
